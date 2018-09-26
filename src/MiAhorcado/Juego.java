@@ -5,6 +5,7 @@
  */
 package MiAhorcado;
 
+import java.awt.Dimension;
 import javax.swing.JLabel;
 
 /**
@@ -19,13 +20,13 @@ public class Juego extends javax.swing.JFrame {
     public Juego() {
         initComponents();
     }
-    Clase1 palabra=new Clase1();
+    Clase1 palabra = new Clase1();
     JLabel casilla[];
-    String palabrita = palabra.mipalabrita();
-void crearLabels(){
-    
 
-}
+    void crearLabels() {
+
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -67,13 +68,23 @@ void crearLabels(){
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-    casilla=new JLabel[palabrita.length()];
-    for (int i= 0; i<palabrita.length(); i++)
-    {
-        casilla[i].setBounds(20*i, 15, 20, 30);
-        casilla[i].setText("-");
-        add(casilla[i]);
-    }    
+
+        String palabrita = palabra.mipalabrita();
+        casilla = new JLabel[palabrita.length()];
+        
+        
+        for (int i = 0; i < palabrita.length(); i++) {
+            
+            casilla[i]=new JLabel();
+            casilla[i].setBounds(20 * i, 15, 20, 30);
+            casilla[i].setSize(new Dimension(50,50));
+            //casilla[i].setText("-");
+            casilla[i].setText(String.valueOf(palabrita.charAt(i)));
+            this.add(casilla[i]);
+            casilla[i].setVisible(true);
+        }
+       this.repaint();
+       
     }//GEN-LAST:event_jButton1MouseClicked
 
     /**
