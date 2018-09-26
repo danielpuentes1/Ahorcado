@@ -7,14 +7,16 @@ import java.util.Random;
 public class Clase1 {
    
 
-String [] palabra = {"casa","gato","loro"};    
+String  palabra[]= {"casa","gato","loro","mago","perro","gatubela","ahorcado","pumita"};    
  
- void seleccionarPalabra(){
-    String mipalabrita;
+ 
+  
     Random miRandom = new Random();
+    String mipalabrita(){
+    int palabraseleccionada = miRandom.nextInt(3);
+    return palabra[palabraseleccionada]; 
     
-    int palabraseleccionada = miRandom.nextInt(2);
-    mipalabrita = palabra[palabraseleccionada]; 
+    
    
 }
  
