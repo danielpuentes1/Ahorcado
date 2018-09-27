@@ -20,12 +20,10 @@ public class Juego extends javax.swing.JFrame {
     public Juego() {
         initComponents();
     }
-    Clase1 palabra = new Clase1();
+    Palabra1 palabra = new Palabra1();
     JLabel casilla[];
 
-    void crearLabels() {
-
-    }
+   
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -37,6 +35,33 @@ public class Juego extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
+        Q = new javax.swing.JButton();
+        Z = new javax.swing.JButton();
+        A = new javax.swing.JButton();
+        Y = new javax.swing.JButton();
+        H = new javax.swing.JButton();
+        W = new javax.swing.JButton();
+        E = new javax.swing.JButton();
+        R = new javax.swing.JButton();
+        F = new javax.swing.JButton();
+        V = new javax.swing.JButton();
+        C = new javax.swing.JButton();
+        D = new javax.swing.JButton();
+        T = new javax.swing.JButton();
+        B = new javax.swing.JButton();
+        N = new javax.swing.JButton();
+        G = new javax.swing.JButton();
+        S = new javax.swing.JButton();
+        X = new javax.swing.JButton();
+        U = new javax.swing.JButton();
+        I = new javax.swing.JButton();
+        M = new javax.swing.JButton();
+        J = new javax.swing.JButton();
+        O = new javax.swing.JButton();
+        L = new javax.swing.JButton();
+        K = new javax.swing.JButton();
+        P = new javax.swing.JButton();
+        Ñ = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -47,21 +72,176 @@ public class Juego extends javax.swing.JFrame {
             }
         });
 
+        Q.setText("Q");
+        Q.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                QMouseClicked(evt);
+            }
+        });
+
+        Z.setText("Z");
+
+        A.setText("A");
+
+        Y.setText("Y");
+
+        H.setText("H");
+
+        W.setText("W");
+
+        E.setText("E");
+
+        R.setText("R");
+
+        F.setText("F");
+
+        V.setText("V");
+
+        C.setText("C");
+
+        D.setText("D");
+
+        T.setText("T");
+
+        B.setText("B");
+
+        N.setText("N");
+
+        G.setText("G");
+
+        S.setText("S");
+
+        X.setText("X");
+
+        U.setText("U");
+
+        I.setText("I");
+
+        M.setText("M");
+
+        J.setText("J");
+
+        O.setText("O");
+
+        L.setText("L");
+
+        K.setText("K");
+
+        P.setText("P");
+
+        Ñ.setText("Ñ");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(A)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                        .addComponent(S)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(D)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(F)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(G)
+                        .addGap(7, 7, 7)
+                        .addComponent(H)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(J)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(K)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(L)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Ñ)
+                        .addGap(362, 362, 362))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(25, 25, 25)
+                                .addComponent(Z)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(X)
+                                .addGap(13, 13, 13)
+                                .addComponent(C)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(V)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(B)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(N)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(M))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Q)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(W)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(E)
+                                .addGap(9, 9, 9)
+                                .addComponent(R)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(T)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Y)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(U)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(I)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(O)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(P)))
+                        .addGap(0, 0, Short.MAX_VALUE))))
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButton1)
-                .addContainerGap(325, Short.MAX_VALUE))
+                .addGap(338, 338, 338))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButton1)
-                .addContainerGap(266, Short.MAX_VALUE))
+                .addGap(77, 77, 77)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Q)
+                    .addComponent(W)
+                    .addComponent(E)
+                    .addComponent(R)
+                    .addComponent(T)
+                    .addComponent(Y)
+                    .addComponent(U)
+                    .addComponent(I)
+                    .addComponent(O)
+                    .addComponent(P))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(A)
+                    .addComponent(F)
+                    .addComponent(D)
+                    .addComponent(S)
+                    .addComponent(G)
+                    .addComponent(H)
+                    .addComponent(J)
+                    .addComponent(K)
+                    .addComponent(L)
+                    .addComponent(Ñ))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Z)
+                    .addComponent(V)
+                    .addComponent(C)
+                    .addComponent(X)
+                    .addComponent(B)
+                    .addComponent(N)
+                    .addComponent(M))
+                .addContainerGap(81, Short.MAX_VALUE))
         );
 
         pack();
@@ -76,10 +256,10 @@ public class Juego extends javax.swing.JFrame {
         for (int i = 0; i < palabrita.length(); i++) {
             
             casilla[i]=new JLabel();
-            casilla[i].setBounds(20 * i, 15, 20, 30);
+            casilla[i].setBounds(18 * i, 40, 20, 30);
             casilla[i].setSize(new Dimension(50,50));
-            //casilla[i].setText("-");
-            casilla[i].setText(String.valueOf(palabrita.charAt(i)));
+            casilla[i].setText("-");
+            //casilla[i].setText(String.valueOf(palabrita.charAt(i)));
             this.add(casilla[i]);
             casilla[i].setVisible(true);
         }
@@ -87,6 +267,28 @@ public class Juego extends javax.swing.JFrame {
        
     }//GEN-LAST:event_jButton1MouseClicked
 
+    private void QMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QMouseClicked
+     String qletter = "q";
+     
+     String palabrita = palabra.mipalabrita();
+
+    // char [] aPalabrita = palabrita.toCharArray();
+   
+     for (int i = 0; i<palabrita.length(); i++){
+       String letra = String.valueOf(palabrita.charAt(i));
+       if(letra == qletter){
+           
+            casilla[i]=new JLabel();
+            casilla[i].setBounds(18 * i, 40, 20, 30);
+            casilla[i].setSize(new Dimension(50,50));
+           // casilla[i].setText("-");
+            casilla[i].setText("q");
+            this.add(casilla[i]);
+            casilla[i].setVisible(true);
+       }
+       this.repaint();
+    }//GEN-LAST:event_QMouseClicked
+    }
     /**
      * @param args the command line arguments
      */
@@ -123,6 +325,33 @@ public class Juego extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton A;
+    private javax.swing.JButton B;
+    private javax.swing.JButton C;
+    private javax.swing.JButton D;
+    private javax.swing.JButton E;
+    private javax.swing.JButton F;
+    private javax.swing.JButton G;
+    private javax.swing.JButton H;
+    private javax.swing.JButton I;
+    private javax.swing.JButton J;
+    private javax.swing.JButton K;
+    private javax.swing.JButton L;
+    private javax.swing.JButton M;
+    private javax.swing.JButton N;
+    private javax.swing.JButton O;
+    private javax.swing.JButton P;
+    private javax.swing.JButton Q;
+    private javax.swing.JButton R;
+    private javax.swing.JButton S;
+    private javax.swing.JButton T;
+    private javax.swing.JButton U;
+    private javax.swing.JButton V;
+    private javax.swing.JButton W;
+    private javax.swing.JButton X;
+    private javax.swing.JButton Y;
+    private javax.swing.JButton Z;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton Ñ;
     // End of variables declaration//GEN-END:variables
 }
