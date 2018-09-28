@@ -22,6 +22,7 @@ public class Juego extends javax.swing.JFrame {
     }
     Palabra1 palabra = new Palabra1();
     JLabel casilla[];
+    String PalabraSeleccionada = "";
 
    
 
@@ -88,6 +89,11 @@ public class Juego extends javax.swing.JFrame {
         H.setText("H");
 
         W.setText("W");
+        W.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                WMouseClicked(evt);
+            }
+        });
 
         E.setText("E");
 
@@ -249,11 +255,11 @@ public class Juego extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
 
-        String palabrita = palabra.mipalabrita();
-        casilla = new JLabel[palabrita.length()];
+        PalabraSeleccionada = palabra.mipalabrita();
+        casilla = new JLabel[PalabraSeleccionada.length()];
         
         
-        for (int i = 0; i < palabrita.length(); i++) {
+        for (int i = 0; i < PalabraSeleccionada.length(); i++) {
             
             casilla[i]=new JLabel();
             casilla[i].setBounds(18 * i, 40, 20, 30);
@@ -270,13 +276,36 @@ public class Juego extends javax.swing.JFrame {
     private void QMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QMouseClicked
      String qletter = "q";
      
-     String palabrita = palabra.mipalabrita();
-
+     String palabrita = PalabraSeleccionada;
+    
+     for (int n = 0; n < palabrita.length(); n++) {
+         char c = palabrita.charAt(n); 
+         
+         if(String.valueOf(c).equals(qletter)){
+             System.out.println("la posicion es"+n); 
+             System.out.println(c); 
+             casilla[n]=new JLabel();
+            casilla[n].setBounds(18 * n, 30, 20, 30);
+            casilla[n].setSize(new Dimension(50,50));
+           // casilla[i].setText("-");
+            casilla[n].setText("q");
+            this.add(casilla[n]);
+            casilla[n].setVisible(true);
+             
+         }else{
+         // agregamos imagen
+         
+         }         
+         
+    }
+         
+       
+  
     // char [] aPalabrita = palabrita.toCharArray();
-   
-     for (int i = 0; i<palabrita.length(); i++){
+   this.repaint();
+     /*for (int i = 0; i<palabrita.length(); i++){
        String letra = String.valueOf(palabrita.charAt(i));
-       if(letra == qletter){
+       if(letra.equals(qletter)){
            
             casilla[i]=new JLabel();
             casilla[i].setBounds(18 * i, 40, 20, 30);
@@ -286,9 +315,13 @@ public class Juego extends javax.swing.JFrame {
             this.add(casilla[i]);
             casilla[i].setVisible(true);
        }
-       this.repaint();
+       this.repaint();*/
     }//GEN-LAST:event_QMouseClicked
-    }
+
+    private void WMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_WMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_WMouseClicked
+    //}
     /**
      * @param args the command line arguments
      */

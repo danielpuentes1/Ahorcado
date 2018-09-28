@@ -7,7 +7,7 @@ import java.util.Random;
 public class Palabra1 {
    
 
-String  palabra[]= {"cqasa","qgato","lqoro","maqgo","pqerro","gatuqbela","ahorqcado","pumqita","queso"};    
+String  palabra[]= {"cqasaq","qgatoq","lqoroq","maqgoq","pqerrqo","gatuqbelqa","ahorqcadqo","qpumqita","quesoq"};    
  
  
   
