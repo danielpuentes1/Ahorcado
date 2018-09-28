@@ -274,32 +274,41 @@ public class Juego extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void QMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QMouseClicked
-     String qletter = "q";
      
-     String palabrita = PalabraSeleccionada;
+         ValidarLetra("q");
+    }
     
-     for (int n = 0; n < palabrita.length(); n++) {
+    
+    public void ValidarLetra(String letra){
+    String qletter = letra;
+    int contadorErrores = 0;
+    String palabrita = PalabraSeleccionada;
+    
+    if(contadorErrores < 5){
+    for (int n = 0; n < palabrita.length(); n++) {
          char c = palabrita.charAt(n); 
          
          if(String.valueOf(c).equals(qletter)){
              System.out.println("la posicion es"+n); 
              System.out.println(c); 
              casilla[n]=new JLabel();
-            casilla[n].setBounds(18 * n, 30, 20, 30);
-            casilla[n].setSize(new Dimension(50,50));
-           // casilla[i].setText("-");
-            casilla[n].setText("q");
-            this.add(casilla[n]);
-            casilla[n].setVisible(true);
-             
+             casilla[n].setBounds(18 * n, 30, 20, 30);
+             casilla[n].setSize(new Dimension(50,50));
+             // casilla[i].setText("-");
+             casilla[n].setText(letra);
+             this.add(casilla[n]);
+             casilla[n].setVisible(true);             
          }else{
-         // agregamos imagen
+         contadorErrores++;
          
+         //agregar dibujo
          }         
-         
+       }  
+      }else{
+    
+    //perdio
+    
     }
-         
-       
   
     // char [] aPalabrita = palabrita.toCharArray();
    this.repaint();
